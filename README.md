@@ -1,5 +1,6 @@
 # DeepLearningBasedTBDiagnosis
 
+## Data Preparation
 CXR Modality-Specific Pretraining
 In the first step, we retrained a selection of MobileNet-V2 and EfficientNet-B0
 
