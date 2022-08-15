@@ -12,5 +12,16 @@ The data used in this project comes from different institution/repository
 - shenzhen
 - montegomery
 - pediatric-pnemonia
+
+| Source|TB | NTB | NORM|
+|-------|---|-----|------|
+|NIH|4287|-|-|
+|TBX11K|800|3800|3800|
+|pediatric-pnemonia|-|4273|1514|
+|**Total Training**|**5087**|**8073**|**5314**|
+|Shenzhen|336|-|326|
+|Montegomery|58|-|80|
+|**Total**|||5394|
+
 ## Model Development
 
