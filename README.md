@@ -6,6 +6,11 @@ is a chest radiography used for the diagnosis for diseases attacking lung. Radio
 ![chest x-ray](https://user-images.githubusercontent.com/39334921/184656878-2da1a3a8-825e-481e-a972-1911b5df420f.png)
 
 ## Data Preparation
-
+The data used in this project comes from different institution/repository
+- NIH
+- TBx11k
+- shenzhen
+- montegomery
+- pediatric-pnemonia
 ## Model Development
 
