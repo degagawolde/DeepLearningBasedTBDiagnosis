@@ -1,15 +1,7 @@
 # Deep Learning Based Chest X-ray Diagnosis
 
+Chext x-ray is a chest radiography used for the diagnosis for diseases attacking lung. Radiologists can look at the image and examine if there is anomalies in the x-ray image. In this project, we traiend a deep learning model (MobileNetV2) for the diagnosis of the chest x-ray images.
 ## Data Preparation
 
 ## Model Development
-CXR Modality-Specific Pretraining
-In the first step, we retrained a selection of MobileNet-V2 and EfficientNet-B0
 
-During this training step, the combined CXR collection, including RSNA CXR, pediatric
-pneumonia CXR, and Indiana CXR datasets, is split at the patient-level into 80%
-for training and 20% for testing. With a fixed seed value, we allocated 10% of the training
-data toward model validation. The models are optimized using stochastic gradient descent
-(SGD) algorithm to minimize the categorical cross-entropy loss toward this classification
-task. Callbacks are used to check model performance, and the model checkpoints are stored
-after each epoch.
