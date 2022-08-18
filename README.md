@@ -47,8 +47,6 @@ def build_model(input_shape):
     return tf.keras.Model(inputs,output)
 ```
 
-## Result of classification
-
-## Result of Segmentation
+## Segmentation
 
 ## Localization
