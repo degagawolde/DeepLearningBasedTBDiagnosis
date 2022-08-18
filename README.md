@@ -29,7 +29,6 @@ In this project we used MobileNetv2-it has a much less number of parametes compa
 
 It's pretrained version can be import using:
 ```
-tf.keras.applications.MobileNetV2(
-        input_tensor = inputs,  weights="imagenet", include_top=False, alpha=0.35)
+tf.keras.applications.MobileNetV2(input_tensor = inputs,  weights="imagenet", include_top=False, alpha=0.35)
 ```
         
