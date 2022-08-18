@@ -23,8 +23,8 @@ The data used in this project comes from different institution/repository
 |Montegomery|58|-|80|
 |**Total**|||5394|
 
-## Model Development
-
+# Model Development
+## Classification
 - In this project we used MobileNetv2-it has a much less number of parametes compared to deep learning model such as VGG. 
 - It uses depthwise separable convolution to reduce number of learned parameters.
 
