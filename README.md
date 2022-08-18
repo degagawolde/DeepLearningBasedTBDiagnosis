@@ -25,3 +25,8 @@ The data used in this project comes from different institution/repository
 
 ## Model Development
 
+In this project we used MobileNetv2-it has a much less number of parametes compared to deep learning model such as VGG. It uses depthwise separable convolution to reduce number of learned parameters.
+
+'''It's pretrained version can be import using: tf.keras.applications.MobileNetV2(
+        input_tensor = inputs,  weights="imagenet", include_top=False, alpha=0.35)'''
+        
