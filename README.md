@@ -31,4 +31,8 @@ It's pretrained version can be import using:
 ```
 tf.keras.applications.MobileNetV2(input_tensor = inputs,  weights="imagenet", include_top=False, alpha=0.35)
 ```
-        
+## Result of classification
+
+## Result of Segmentation
+
+## Localization
