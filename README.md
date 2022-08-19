@@ -56,5 +56,49 @@ def build_model(input_shape):
 ## Segmentation
 Chst x-ray images contains different parts of the chest that are not imprtant for lung disease diagnosis. The main purpose of this section is segmenting lung area from the rest of the cheast parts. **UNET** is used for semantic segmentation task. Hence, we constructed **UNET** using the mobilenetv2 as a backbone encoder, as expressed [here](https://github.com/nikhilroxtomar/Unet-with-Pretrained-Encoder/blob/master/U-Net_with_Pretrained_MobileNetV2_as_Encoder.ipynb?ref=morioh.com&utm_source=morioh.com). 
 ![image](https://github.com/nikhilroxtomar/Unet-with-Pretrained-Encoder/raw/5898a1e1ee66df875239d679839a30e419b20375//images/u-net-architecture.png)
+1. first build the backbone encoder from mobilenetv2
+```
+def build_model(inputs):
+    mobilenetv2 = tf.keras.applications.MobileNetV2(
+        input_tensor = inputs, 
+        weights="imagenet", include_top=False, alpha=0.35)
+    mobilenetv2.trainable = False
+    x = mobilenetv2.get_layer('out_relu').output
+    x = Conv2D(128,3,name='final_conv',padding='same',activation='relu')(x)
+    x = GlobalAveragePooling2D(name='gap')(x)
+    output = Dense(2,activation='sigmoid')(x)
+    return tf.keras.Model(inputs,output)
+```
 
+2. construct the unet
+```
+def model():
+    inputs = Input(shape=(IMAGE_SIZE, IMAGE_SIZE, 3), name="input_image")
+    
+    encoder = build_model(inputs)
+#     encoder.load_weights('../../output/checkpoints/mobilenetv2/512_128weights.16-0.31.hdf5')
+    skip_connection_names = ["input_image","block_1_expand_relu", "block_3_expand_relu", "block_6_expand_relu"]
+    encoder_output = encoder.get_layer("block_13_expand_relu").output
+    f = [ 16, 32, 48, 64]
+    x = encoder_output
+    for i in range(1, len(skip_connection_names)+1, 1):
+        x_skip = encoder.get_layer(skip_connection_names[-i]).output
+        x = UpSampling2D((2, 2))(x)
+        x = Concatenate()([x, x_skip])
+        
+        x = Conv2D(f[-i], (3, 3), padding="same")(x)
+        x = BatchNormalization()(x)
+        x = Activation("relu")(x)
+        
+        x = Conv2D(f[-i], (3, 3), padding="same")(x)
+        x = BatchNormalization()(x)
+        x = Activation("relu")(x)
+        
+    x = Conv2D(1, (1, 1), padding="same")(x)
+    x = Activation("sigmoid")(x)
+    
+    model = Model(inputs, x)
+    
+    return model
+```
 ## Localization
