@@ -100,11 +100,10 @@ def model():
     return model
 ```
 **Result**
-| Class|Accuracy|Recall|Precision|f1 score|
-|------|--------|------|---------|--------|
-|All   |        |      |         |        |
-|TB    |        |      |         |        |
-|NTB   |        |      |         |        |
-|NORM  |        |      |         |        |
+| Metrices|value|
+|------|--------|
+|Dice_Coef    |96.7|    
+|Jackard_index|93.7|  
+
 
 ## Localization
