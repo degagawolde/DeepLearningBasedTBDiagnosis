@@ -55,5 +55,6 @@ def build_model(input_shape):
 |NORM  |        |      |         |        |
 ## Segmentation
 Chst x-ray images contains different parts of the chest that are not imprtant for lung disease diagnosis. The main purpose of this section is segmenting lung area from the rest of the cheast parts. **UNET** is used for semantic segmentation task. Hence, we constructed **UNET** using the mobilenetv2 as a backbone encoder, as expressed [here](https://github.com/nikhilroxtomar/Unet-with-Pretrained-Encoder/blob/master/U-Net_with_Pretrained_MobileNetV2_as_Encoder.ipynb?ref=morioh.com&utm_source=morioh.com). 
+![image](https://github.com/nikhilroxtomar/Unet-with-Pretrained-Encoder/raw/5898a1e1ee66df875239d679839a30e419b20375//images/u-net-architecture.png)
 
 ## Localization
