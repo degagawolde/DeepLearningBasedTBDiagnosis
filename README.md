@@ -74,9 +74,7 @@ def build_model(inputs):
 ```
 def model():
     inputs = Input(shape=(IMAGE_SIZE, IMAGE_SIZE, 3), name="input_image")
-    
     encoder = build_model(inputs)
-#     encoder.load_weights('../../output/checkpoints/mobilenetv2/512_128weights.16-0.31.hdf5')
     skip_connection_names = ["input_image","block_1_expand_relu", "block_3_expand_relu", "block_6_expand_relu"]
     encoder_output = encoder.get_layer("block_13_expand_relu").output
     f = [ 16, 32, 48, 64]
