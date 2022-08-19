@@ -46,7 +46,13 @@ def build_model(input_shape):
     output = Dense(3,activation='softmax')(x)
     return tf.keras.Model(inputs,output)
 ```
-
+**Result**
+| Class|Accuracy|Recall|Precision|f1 score|
+|------|--------|------|---------|--------|
+|All   |        |      |         |        |
+|TB    |        |      |         |        |
+|NTB   |        |      |         |        |
+|NORM  |        |      |         |        |
 ## Segmentation
 
 ## Localization
