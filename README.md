@@ -99,4 +99,12 @@ def model():
     
     return model
 ```
+**Result**
+| Class|Accuracy|Recall|Precision|f1 score|
+|------|--------|------|---------|--------|
+|All   |        |      |         |        |
+|TB    |        |      |         |        |
+|NTB   |        |      |         |        |
+|NORM  |        |      |         |        |
+
 ## Localization
