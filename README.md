@@ -47,8 +47,11 @@ def build_model(input_shape):
     return tf.keras.Model(inputs,output)
 ```
 ***Confusion Matrixs***
+
 ![cm](https://github.com/degagawolde/DeepLearningBasedTBDiagnosis/blob/main/images/confusionmatrix.png)
+
 ***Result***
+
 | Class|Accuracy|Recall|Precision|f1 score|
 |---|----|------|---------|--------|
 |All|98|98|98|98|
