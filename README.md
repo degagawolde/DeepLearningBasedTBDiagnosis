@@ -113,7 +113,6 @@ def model():
 
 
 ## Localization
-- SHAP
 - CAM
 - GradCAM
 - GradCAM++
