@@ -108,8 +108,8 @@ def model():
 **Result**
 | Metrices|value|
 |------|--------|
-|Dice_Coef    |96.8|    
-|Jackard_index|93.8|  
+|Dice_Coef    |97.1|    
+|Jackard_index|94.4|  
 
 
 ## Localization
