@@ -2,4 +2,5 @@ dataset/
 .DS_Store/
 output/
 logs/
-.ipynb_checkpoint
+.ipynb_checkpoints/
+
