@@ -31,6 +31,11 @@ def save_and_display_gradcam(img, heatmap, pos, cam_path="cam.jpg", alpha=0.4, t
 
     # Display Grad CAM
 #   display(Image(cam_path))
+    
+#     plt.rcParams["figure.figsize"] = (20,3)
+#     plt.figure(figsize=(1,1))
+    
     plt.subplot(10, 2, pos)
     plt.title(title)
     plt.imshow(superimposed_img)
+    
