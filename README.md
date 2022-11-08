@@ -7,11 +7,11 @@ is a chest radiography used for the diagnosis for diseases attacking lung. Radio
 
 ## Data Preparation
 The data used in this project comes from different institution/repository
-- NIH
-- TBx11k
-- shenzhen
-- montegomery
-- pediatric-pnemonia
+- NIH - obtained from https://tbportals.niaid.nih.gov/Datasharing
+- TBx11k - https://www.kaggle.com/datasets/usmanshams/tbx-11
+- shenzhen - https://www.kaggle.com/datasets/raddar/tuberculosis-chest-xrays-shenzhen
+- montegomery - https://www.kaggle.com/datasets/raddar/tuberculosis-chest-xrays-montgomery
+- pediatric-pnemonia - https://www.kaggle.com/datasets/andrewmvd/pediatric-pneumonia-chest-xray
 
 | Source|TB | NTB | NORM|
 |-------|---|-----|------|
